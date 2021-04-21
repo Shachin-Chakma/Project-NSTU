@@ -24,32 +24,6 @@
     <link rel="stylesheet" type="text/css" href="../../plugins/datatables/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="../../plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
-
-    <style>
-        .table-heading-section {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .table-heading-section button {
-            width: auto;
-            height: 40px;
-            background: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            text-transform: uppercase;
-            font-weight: 800;
-            padding: 0 20px;
-        }
-
-        .table-heading-section button:hover {
-            background: transparent;
-            border: 2px solid #000;
-            color: #000;
-            font-weight: 500;
-        }
-    </style>
 </head>
 
 <body>
@@ -91,7 +65,7 @@
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="student-attendance.html" class="dropdown-toggle no-arrow">
+                        <a href="attendance-table.html" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-open-book-2"></span><span class="mtext">Attendance</span>
                         </a>
                     </li>
@@ -102,7 +76,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="co-ordinator.html" class="dropdown-toggle no-arrow">
+                        <a href="teacher-assign-page.html" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-user-1"></span><span class="mtext">Co-ordinator</span>
                         </a>
                     </li>
@@ -130,10 +104,9 @@
 
             <div class="min-height-200px">
                 <div class="card-box mb-30">
-                    <div class="pd-20 table-heading-section">
-                        <h4 class="text-blue h4">Students Attendance Records for Course
+                    <div class="pd-20">
+                        <h4 class="text-blue h4" style="text-align: center;">Students Attendance Records for Course
                             Co-ordinator</h4>
-                        <button>Submit to Chairman &#10140;</button>
                     </div>
                     <div class="pb-20">
                         <table class="data-table table hover multiple-select-row nowrap">

@@ -1,16 +1,17 @@
 // Page Redirect Script Start
-$(function () {
+function helper(id) {
     document
-        .getElementById("myBtn")
+        .querySelector(`.myBtn${id}`)
         .addEventListener("click", function () {
             redirect(this.getAttribute("data-page"));
         });
+        redirect(this.getAttribute("data-page"));
 
     $('button:nth-child(1)')
         .click(function () {
             redirect($(this).attr('data-page'));
         });
-})
+}
 
 function redirect(url) {
     console.log(url);
