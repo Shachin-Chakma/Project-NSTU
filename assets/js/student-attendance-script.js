@@ -1,5 +1,6 @@
 const classesData = [
     {
+        id: 1,
         dep: 'CSE',
         session: '2018-2019',
         semester: '1',
@@ -8,6 +9,7 @@ const classesData = [
         isActive: true
     },
     {
+        id: 2,
         dep: 'CSE',
         session: '2018-2019',
         semester: '3',
@@ -16,6 +18,7 @@ const classesData = [
         isActive: true
     },
     {
+        id: 3,
         dep: 'CSE',
         session: '2018-2019',
         semester: '3',
@@ -24,6 +27,7 @@ const classesData = [
         isActive: true
     },
     {
+        id: 4,
         dep: 'EEE',
         session: '2018-2019',
         semester: '3',
@@ -32,6 +36,7 @@ const classesData = [
         isActive: true
     },
     {
+        id: 5,
         dep: 'EEE',
         session: '2018-2019',
         semester: '3',
@@ -40,6 +45,7 @@ const classesData = [
         isActive: false
     },
     {
+        id: 6,
         dep: 'CSE',
         session: '2018-2019',
         semester: '5',
@@ -56,14 +62,14 @@ console.log(boxesDiv)
 
 const displayClasses = (data) => {
     data.map(classData => {
-        const {session, semester, course, isActive} = classData;
+        const {session, semester, course, isActive, id} = classData;
        
         let createDiv = document.createElement('div');
         createDiv.classList.add('box');
        
         createDiv.innerHTML = `
-            <div class="${isActive ? 'active' : 'unactive'}"></div>
-            <a >
+            <div class="${isActive ? 'class-active' : 'class-unactive'}"></div>
+            <a data-page="attendance-table.html" class="myBtn${id}" onmouseenter="helper(${id})">
                 <p>SESSION: ${session}</p>
                 <p>SEMESTER: ${semester}</p>
                 <p>COURSE: ${course}</p>
