@@ -4172,3 +4172,97 @@ and also iPads specifically.
   }
 }
 /* Table CSS End */
+
+/* Teacher Assign Page CSS Start */
+.data-collection {
+  text-align: center;
+}
+
+.heading-title h4 {
+  padding-top: 20px;
+}
+
+.data-collect-form {
+  padding-top: 20px;
+  text-align: left;
+}
+
+.data-collect-form form {
+  margin: 10px 80px;
+}
+
+.data-collect-form label {
+  color: #6c757d;
+}
+
+.data-collect-form select {
+  width: 100%;
+  color: #6c757d;
+  height: 40px;
+  padding: 0 20px;
+}
+
+.assign-button button {
+  width: 100px;
+  height: 40px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.assign-button button:hover {
+  background: transparent;
+  border: 2px solid #000;
+  color: #000;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .data-collect-form form {
+    width: 70%;
+  }
+
+  .data-collect-form select {
+    border: 2px solid #6c757d;
+  }
+
+  .assign-button button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 541px) {
+  .assign-button button {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 415px) {
+  .data-collect-form form {
+    width: 75%;
+    margin-left: 50px;
+    margin-right: 50px ;
+  }
+}
+
+@media (max-width: 361px) {
+  .data-collect-form form {
+    width: 73%;
+  }
+}
+
+@media (max-width: 321px) {
+  .data-collect-form form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 281px) {
+  .data-collect-form form {
+    width: 65%;
+  }
+}
+/* Teacher Assign Page CSS End */

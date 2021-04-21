@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Project NSTU</title>
+
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x270" href="../../img/NSTU-Logo.png">
+    <link rel="icon" type="image/png" sizes="32x48" href="../../img/NSTU-Logo.png">
+    <link rel="icon" type="image/png" sizes="16x24" href="../../img/NSTU-Logo.png">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../css/core.css">
+    <link rel="stylesheet" type="text/css" href="../../css/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="menu-icon dw dw-menu"></div>
+        </div>
+        <div class="header-right">
+            <div class="user-info-dropdown">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                        <span class="user-icon">
+                            <img src="../../img/profile.jpg" alt="">
+                        </span>
+                        <span class="user-name">Teacher Name</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                        <a class="dropdown-item" href="javascript:;"><i class="dw dw-settings2"></i> Setting</a>
+                        <a class="dropdown-item" href="javascript:;"><i class="dw dw-logout"></i> Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="left-side-bar">
+        <div class="brand-logo">
+            <h4 class="heading-letter">Menu</h4>
+            <div class="close-sidebar" data-toggle="left-sidebar-close">
+                <i class="ion-close-round"></i>
+            </div>
+        </div>
+        <div class="menu-block customscroll">
+            <div class="sidebar-menu">
+                <ul id="accordion-menu">
+                    <li class="dropdown">
+                        <a href="profile.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-user"></span><span class="mtext">Profile</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-open-book-2"></span><span class="mtext">Attendance</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="student-details.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw ion-information-circled"></span><span class="mtext">Student
+                                Details</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="teacher-assign-page.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-user-1"></span><span class="mtext">Co-ordinator</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-user1"></span><span class="mtext">Chairman</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="footer-wrap pd-20 mb-20 card-box">
+                <div class="university-logo">
+                    <img src="../../img/NSTU-Logo.png" alt="">
+                </div>
+                <div class="university-name">
+                    <h3>Noakhali Science & Technology University</h3>
+                </div>
+            </div>
+
+            <div class="min-height-200px">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
+                        <div class="pd-20 card-box height-100-p">
+                            <div class="profile-photo">
+                                <img src="../../img/profile.jpg" alt="" class="avatar-photo">
+                            </div>
+                            <h5 class="text-center h5 mb-0">Teacher Name</h5>
+                            <p class="text-center text-muted font-14">Associate Professor, Department of ICE, Noakhali
+                                Science & Technology University</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
+                        <div class="card-box height-100-p overflow-hidden">
+                            <div class="profile-tab height-100-p">
+                                <div class="tab height-100-p">
+                                    <div class="data-collection">
+                                        <div class="heading-title">
+                                            <h4>Assign yourself as a Co-ordinator</h4>
+                                        </div>
+                                        <div class="data-collect-form">
+                                            <form action="">
+                                                <label for="department">Select Department: </label>
+                                                <select name="department" id="department">
+                                                    <option value="CSE">CSE</option>
+                                                    <option value="ICE">ICE</option>
+                                                    <option value="EEE">EEE</option>
+                                                    <option value="ME">ME</option>
+                                                    <option value="TE">TE</option>
+                                                </select>
+                                            </form>
+                                            <form action="">
+                                                <label for="session">Select Session: </label>
+                                                <select name="session" id="session">
+                                                    <option value="2013-2014">2013-2014</option>
+                                                    <option value="2014-2015">2014-2015</option>
+                                                    <option value="2015-2016">2015-2016</option>
+                                                    <option value="2016-2017">2016-2017</option>
+                                                    <option value="2017-2018">2017-2018</option>
+                                                    <option value="2018-2019">2018-2019</option>
+                                                    <option value="2019-2020">2019-2020</option>
+                                                    <option value="2020-2021">2020-2021</option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div class="assign-button">
+                                            <button data-page="co-ordinator.html" id="myBtn">Assign</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-wrap pd-20 mb-20 card-box">
+                This templete is develop by Project NSTU Team
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="../../js/core.js"></script>
+    <script src="../../js/script.min.js"></script>
+    <script src="../../js/project-nstu-custom-script.js"></script>
+</body>
+
+</html>
