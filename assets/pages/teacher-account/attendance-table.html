@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/icon-font.min.css">
     <link rel="stylesheet" type="text/css" href="../../plugins/datatables/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="../../plugins/datatables/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="../../plugins/bootstrap/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../plugins/bootstrap/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 
@@ -103,340 +103,146 @@
             </div>
 
             <div class="min-height-200px">
+                <!-- Checkbox select Datatable start -->
                 <div class="card-box mb-30">
                     <div class="pd-20">
-                        <h4 class="text-blue h4" style="text-align: center;">Students Attendance Records for Course
-                            Co-ordinator</h4>
+                        <h4 class="text-blue h4">Data Table with Checckbox select</h4>
                     </div>
                     <div class="pb-20">
-                        <table class="data-table table hover multiple-select-row nowrap">
+                        <table class="checkbox-datatable table nowrap">
                             <thead>
                                 <tr>
-                                    <th class="table-plus datatable-nosort">Student ID</th>
-                                    <th>Student Name</th>
-                                    <th>Number of Classes</th>
-                                    <th>Number of Classes Present</th>
-                                    <th>Percentage</th>
-                                    <th>Total Percentage</th>
+                                    <th>
+                                        <div class="dt-checkbox">
+                                            <input type="checkbox" name="select_all" value="" id="example-select-all">
+                                            <span class="dt-checkbox-label"></span>
+                                        </div>
+                                    </th>
+                                    <th>Name</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Start date</th>
+                                    <th>Salary</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="table-plus">2050608001</td>
-                                    <td>Nuton Chakma</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Tiger Nixon</td>
+                                    <td>System Architect</td>
+                                    <td>Tokyo</td>
+                                    <td>2008/11/28</td>
+                                    <td>$162,700</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608002</td>
-                                    <td>Kanonn Chakma</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Angelica Ramos</td>
+                                    <td>Chief Executive Officer (CEO)</td>
+                                    <td>London</td>
+                                    <td>2009/10/09</td>
+                                    <td>$1,200,000</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608003</td>
-                                    <td>Md Al Fahad Yeahyea</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Ashton Cox</td>
+                                    <td>Junior Technical Author</td>
+                                    <td>San Francisco</td>
+                                    <td>2009/01/12</td>
+                                    <td>$86,000</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608004</td>
-                                    <td>Pranta Barua</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Bradley Greer</td>
+                                    <td>Software Engineer</td>
+                                    <td>London</td>
+                                    <td>2012/10/13</td>
+                                    <td>$132,000</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608005</td>
-                                    <td>Shachin Chakma</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Brenden Wagner</td>
+                                    <td>Software Engineer</td>
+                                    <td>San Francisco</td>
+                                    <td>2011/06/07</td>
+                                    <td>$206,850</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608006</td>
-                                    <td>Nijhum Barua</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Caesar Vance</td>
+                                    <td>Pre-Sales Support</td>
+                                    <td>New York</td>
+                                    <td>2011/12/12 </td>
+                                    <td>$106,450</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608007</td>
-                                    <td>Rakib Noor Rashid</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Cedric Kelly</td>
+                                    <td>Senior Javascript Developer</td>
+                                    <td>Edinburgh</td>
+                                    <td>2012/03/29</td>
+                                    <td>$433,060</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608008</td>
-                                    <td>Nabarun Chakma</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Dai Rios</td>
+                                    <td>Personnel Lead</td>
+                                    <td>Edinburgh</td>
+                                    <td>2012/09/26</td>
+                                    <td>$217,500</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608009</td>
-                                    <td>Reagan Dewan</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Doris Wilder</td>
+                                    <td>Sales Assistant</td>
+                                    <td>Sidney</td>
+                                    <td>2010/09/20</td>
+                                    <td>$85,600</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608010</td>
-                                    <td>Diamond Dewan</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Fiona Green</td>
+                                    <td>Chief Operating Officer (COO)</td>
+                                    <td>San Francisco</td>
+                                    <td>2010/03/11</td>
+                                    <td>$850,000</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608011</td>
-                                    <td>Tamal Chakma</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Gavin Cortez</td>
+                                    <td>Team Leader</td>
+                                    <td>San Francisco</td>
+                                    <td>2008/10/26</td>
+                                    <td>$235,500</td>
                                 </tr>
                                 <tr>
-                                    <td class="table-plus">2050608012</td>
-                                    <td>Real Dewan</td>
-                                    <td>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                        <p>CSE 551: 60</p>
-                                    </td>
-                                    <td>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                        <p>45</p>
-                                    </td>
-                                    <td>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                        <p>75%</p>
-                                    </td>
-                                    <td>75%</td>
+                                    <td></td>
+                                    <td>Herrod Chandler</td>
+                                    <td>Sales Assistant</td>
+                                    <td>San Francisco</td>
+                                    <td>2012/08/06</td>
+                                    <td>$137,500</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Hope Fuentes</td>
+                                    <td>Secretary</td>
+                                    <td>San Francisco</td>
+                                    <td>2010/02/12</td>
+                                    <td>$109,850</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Jena Gaines</td>
+                                    <td>Office Manager</td>
+                                    <td>London</td>
+                                    <td>2008/12/19</td>
+                                    <td>$90,560</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
+                <!-- Checkbox select Datatable End -->
             </div>
             <div class="footer-wrap pd-20 mb-20 card-box">
                 This templete is develop by Project NSTU Team
