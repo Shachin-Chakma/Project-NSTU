@@ -1083,7 +1083,7 @@ div.dataTables_wrapper div.dataTables_paginate {
 }
 .dt-checkbox input {
   position: absolute;
-  opacity: 0;
+  /* opacity: 0; */
   z-index: 1;
   left: 0;
   top: 0;
