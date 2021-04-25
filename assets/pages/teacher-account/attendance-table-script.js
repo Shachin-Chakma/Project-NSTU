@@ -1,3 +1,4 @@
+const attendance_date = document.getElementById('attendance-date');
 const submit_btn = document.getElementById('submit-attendance');
 const edit_btn = document.getElementById('edit-attendance');
 var attendance_table = document.getElementById('attendance-table-data');
@@ -30,8 +31,12 @@ submit_btn.addEventListener('click', () => {
 
     setTimeout(() => {
         alert('Attendance was saved');
+        const today = new Date();
+        attendance_date.innerText=`Attendance was taken for ${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
+        attendance_date.style.fontSize='small';
+        attendance_date.style.display='';
         edit_btn.style.display='block';
-        submit_btn.style.display='none'
+        submit_btn.style.display='none';
     }, 1500);
 
     return;
