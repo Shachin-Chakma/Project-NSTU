@@ -5,28 +5,24 @@ var attendance_table = document.getElementById('attendance-table-data');
 const attendance = document.getElementById('attendance');
 
 submit_btn.addEventListener('click', () => {
-  
-    console.log(edit_btn.style.display)
-    let i = 0;
     let checkedItems = document.querySelectorAll('input[type="checkbox"]:checked');
-    //console.log(checkedItems);
+    console.log(checkedItems);
 
     if (checkedItems.length === 0) {
         alert('Please select any student to submit!');
         return
     }
 
-    if (checkedItems[0].id === 'example-select-all') {
-        i = 1;
-    }
-
-    for (i; i < checkedItems.length; i++) {
-        let data = checkedItems[i].closest('tr').querySelectorAll('#attendance')
-        if (data[0].innerText.toLowerCase() === 'absent') {
-            data[0].innerText = 'PRESENT'
-        } else {
-            data[0].innerText = 'absent'
+    for (let i = 0; i < checkedItems.length; i++) {
+        if (checkedItems[i].id !== 'example-select-all') {
+            let data = checkedItems[i].closest('tr').querySelectorAll('#attendance')
+            if (data[0].innerText.toLowerCase() === 'absent') {
+                data[0].innerText = 'PRESENT'
+            } else {
+                data[0].innerText = 'absent'
+            }
         }
+        checkedItems[i].checked = false;
     }
 
     setTimeout(() => {
