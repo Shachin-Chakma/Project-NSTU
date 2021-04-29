@@ -9,7 +9,7 @@ submit_btn.addEventListener('click', () => {
     console.log(checkedItems);
 
     if (checkedItems.length === 0) {
-        alert('Please select any student to submit!');
+        alert('Please select any student to submit');
         return
     }
 
