@@ -28,7 +28,7 @@ submit_btn.addEventListener('click', () => {
     setTimeout(() => {
         alert('Attendance was saved');
         const today = new Date();
-        attendance_date.innerText=`Attendance was taken for ${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
+        attendance_date.innerText=`Attendance was taken for ${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
         attendance_date.style.fontSize='small';
         attendance_date.style.display='';
         edit_btn.style.display='block';

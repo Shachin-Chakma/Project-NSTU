@@ -6,10 +6,584 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Custom CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+
+        :root {
+            /*-------------Colors------------- */
+            --ColorDarkA: rgb(0, 0, 0);
+            --ColorWhiteA: rgb(255, 255, 255);
+            /*-------------FontSize -- Perfect Fifth (1.500) Base Size 22px------------- */
+            --FontH1: 233.25px;
+            --FontH2: 144.16px;
+            --FontH3: 89.10px;
+            --FontH4: 55.07px;
+            --FontH5: 34.03px;
+            --FontParagraph: 21.03px;
+            --FontSubtitle: 13px;
+            /*-------------GoldenRatio (1.618) (Viewport Width 1920px)------------- */
+            --GoldenRatio1: 1920px;
+            --GoldenRatio2: 1186.65px;
+            --GoldenRatio3: 733.41px;
+            --GoldenRatio4: 453.28px;
+            --GoldenRatio5: 280.15px;
+            --GoldenRatio6: 173.15px;
+            --GoldenRatio7: 107.01px;
+            --GoldenRatio8: 66.14px;
+            --GoldenRatio9: 40.88px;
+            --GoldenRatio10: 25.27px;
+            --GoldenRatio11: 15.62px;
+            --GoldenRatio12: 9.65px;
+            --GoldenRatio13: 5.96px;
+            /*-------------Animation Timing Function------------- */
+            --EaseInPower1: cubic-bezier(0.165, 0.84, 0.44, 1);
+            --EaseInPower2: cubic-bezier(0.215, 0.610, 0.355, 1);
+            --EaseInPower3: cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: var(--ColorWhiteA);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            background: var(--ColorDarkA);
+            height: 100vh;
+        }
+
+        #wrapper {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #wrapper #SVGWrap {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        #wrapper #SVGWrap div {
+            position: absolute;
+        }
+
+        #wrapper #SVGWrap #svgA {
+            background: url(https://icodeayush.github.io/BeeSoft/svg/s21.svg) no-repeat center;
+            top: 55vw;
+            left: -40vw;
+            height: 60vw;
+            width: 60vw;
+        }
+
+        #wrapper #SVGWrap #svgB {
+            background: url(https://icodeayush.github.io/BeeSoft/svg/s22.svg) no-repeat center;
+            width: 10vw;
+            height: 10vw;
+            left: 35vw;
+            top: 57vw;
+        }
+
+        #wrapper #SVGWrap #svgC {
+            background: url(https://icodeayush.github.io/BeeSoft/svg/so2.svg) no-repeat center;
+            width: 70vw;
+            height: 60vw;
+            top: 52vw;
+            right: -30vw;
+        }
+
+        #wrapper #logo {
+            position: absolute;
+            z-index: 2;
+            width: fit-content;
+            top: var(--GoldenRatio7);
+            right: var(--GoldenRatio7);
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        #wrapper #logo h1 {
+            font-size: var(--FontH5);
+            font-weight: 600;
+            color: var(--ColorWhiteA);
+            opacity: 0;
+        }
+
+        #wrapper #intro {
+            position: absolute;
+            width: var(--GoldenRatio1);
+            height: 100vh;
+            display: flex;
+            overflow: scroll;
+            scroll-behavior: smooth;
+        }
+
+        #wrapper #intro h1 {
+            display: flex;
+            align-items: center;
+            width: var(--GoldenRatio1);
+            height: 100vh;
+            flex-shrink: 0;
+            cursor: default;
+        }
+
+        #wrapper #intro h1 span {
+            font-size: var(--FontH3);
+            font-weight: 600;
+            width: var(--GoldenRatio3);
+            color: var(--ColorWhiteA);
+            margin-left: var(--GoldenRatio7);
+            opacity: 0;
+        }
+
+        #wrapper nav {
+            position: absolute;
+            right: var(--GoldenRatio7);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #wrapper nav span {
+            display: flex;
+            justify-content: space-between;
+            display: block;
+        }
+
+        #wrapper nav span h2:nth-child(1) {
+            display: block;
+            /* background: url(https://icodeayush.github.io/BeeSoft/svg/ChevronLeft.svg) no-repeat right; */
+            background-size: contain;
+            height: var(--FontH5);
+            width: var(--FontH5);
+            margin-bottom: var(--GoldenRatio11);
+            opacity: 0;
+        }
+
+        #wrapper nav span h2:nth-child(2) {
+            display: block;
+            /* background: url(https://icodeayush.github.io/BeeSoft/svg/ChevronRight.svg) no-repeat right; */
+            background-size: contain;
+            height: var(--FontH5);
+            width: var(--FontH5);
+            opacity: 0;
+        }
+
+        #wrapper footer {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: var(--GoldenRatio7);
+            width: var(--GoldenRatio1);
+            height: var(--FontH4);
+        }
+
+        #wrapper footer #insta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--FontH4);
+            height: var(--FontH4);
+            border-radius: 100%;
+            margin-left: var(--GoldenRatio7);
+            border: 2px solid rgb(255, 255, 255);
+            opacity: 0;
+        }
+
+        #wrapper footer #insta a {
+            display: block;
+            width: var(--FontParagraph);
+            height: var(--FontParagraph);
+            background: url(assets/img/github-icon.svg) no-repeat center;
+            background-size: contain;
+        }
+
+        #wrapper footer #Behance {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--FontH4);
+            height: var(--FontH4);
+            border-radius: 100%;
+            margin-left: var(--GoldenRatio11);
+            border: 2px solid rgb(255, 255, 255);
+            opacity: 0;
+        }
+
+        #wrapper footer #Behance a {
+            display: block;
+            width: var(--FontH5);
+            height: var(--FontParagraph);
+            background: url() no-repeat center;
+            background-size: cover;
+        }
+
+        #wrapper footer #copyright,
+        #wrapper footer #codeby {
+            font-size: var(--FontParagraph);
+            font-weight: 500;
+            color: var(--ColorWhiteA);
+            margin-left: var(--GoldenRatio9);
+            opacity: 0;
+        }
+
+        #wrapper footer #copyright {
+            cursor: default;
+        }
+
+        #wrapper footer #codeby {
+            text-decoration: none;
+            margin-left: var(--GoldenRatio11);
+        }
+
+        #wrapper footer #codeby span {
+            font-weight: 600;
+            opacity: 0;
+        }
+
+        #wrapper #Lang {
+            position: absolute;
+            bottom: var(--GoldenRatio7);
+            right: var(--GoldenRatio7);
+            height: var(--FontH4);
+            display: flex;
+            align-items: center;
+        }
+
+        #wrapper #Lang span {
+            display: flex;
+        }
+
+        #wrapper #Lang span a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--FontH4);
+            height: var(--FontH4);
+            border-radius: 100%;
+            border: 2px solid rgb(255, 255, 255);
+            margin-left: var(--GoldenRatio11);
+            font-size: var(--FontParagraph);
+            font-weight: 500;
+            color: var(--ColorWhiteA);
+            text-decoration: none;
+            opacity: 0;
+        }
+
+        #wrapper #Lang span a:nth-child(2) {
+            background: var(--ColorWhiteA);
+            color: var(--ColorDarkA);
+            opacity: 0;
+        }
+
+        /*-------------Animation Timeline------------- */
+
+        body {
+            animation: BGAni 4s 0s ease-in-out infinite alternate-reverse;
+        }
+
+        #wrapper {
+            animation: BGFadeAni 1.5s 6.1s ease forwards;
+            background: black;
+        }
+
+        #wrapper #SVGWrap {
+            animation: SVGFadeAni 3.3s 6.3s ease forwards;
+            opacity: 0;
+        }
+
+        #wrapper #SVGWrap #svgA {
+            animation: svgA 5.7s 4.9s ease-in-out infinite alternate-reverse;
+        }
+
+        #wrapper #SVGWrap #svgB {
+            animation: svgB 5.2s 6.1s ease-in-out infinite alternate-reverse;
+        }
+
+        #wrapper #SVGWrap #svgC {
+            animation: svgC 5.2s 6.3s ease-in-out infinite alternate-reverse;
+        }
+
+        #wrapper #intro h1 span {
+            animation: LoadAniY 3s 1s var(--EaseInPower3) forwards;
+        }
+
+        #wrapper #logo h1 {
+            animation: LoadAniY 2.2s 2.3s var(--EaseInPower2) forwards;
+        }
+
+        #wrapper footer #insta {
+            animation: LoadAniOpacityY 1.5s 3.4s var(--EaseInPower2) forwards;
+        }
+
+        #wrapper footer #Behance {
+            animation: LoadAniOpacityY 1.5s 3.6s var(--EaseInPower2) forwards;
+        }
+
+        #wrapper footer #copyright {
+            animation: LoadAniOpacityY 1.5s 3.8s var(--EaseInPower2) forwards;
+        }
+
+        #wrapper footer #codeby {
+            animation: LoadAniOpacityY 1.5s 4.2s var(--EaseInPower2) forwards;
+        }
+
+        #wrapper footer #codeby span {
+            animation: LoadAniOpacityY 1.5s 4.4s var(--EaseInPower2) forwards;
+        }
+
+        #wrapper #Lang span a {
+            animation: LoadAniOpacityXR 1.5s 4.8s var(--EaseInPower3) forwards;
+        }
+
+        #wrapper #Lang span a:nth-child(2) {
+            animation: LoadAniOpacityXL 1.5s 5s var(--EaseInPower3) forwards;
+        }
+
+        #wrapper nav span h2:nth-child(1) {
+            animation: LoadAniXL 1.5s 6s var(--EaseInPower1) forwards;
+        }
+
+        #wrapper nav span h2:nth-child(2) {
+            animation: LoadAniXR 1.5s 6.2s var(--EaseInPower1) forwards;
+        }
+
+        /*-------------Animation Keyframes------------- */
+
+        @keyframes BGFadeAni {
+            from {
+                background: black;
+            }
+
+            to {
+                background: rgba(0, 0, 0, 0);
+            }
+        }
+
+        @keyframes SVGFadeAni {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes BGAni {
+            from {
+                background-image: linear-gradient(to top left, #FFC796 0%, #FF6B95 100%);
+            }
+
+            to {
+                background-image: linear-gradient(to top left, #b721ff 0%, #21d4fd 100%);
+            }
+        }
+
+        @keyframes svgA {
+            0% {
+                width: 20vw;
+                height: 20vw;
+                left: 10vw;
+                top: 25vh;
+                background: url(https://icodeayush.github.io/BeeSoft/svg/s21.svg) no-repeat center;
+            }
+
+            20% {
+                background: url(https://icodeayush.github.io/BeeSoft/svg/s11.svg) no-repeat center;
+            }
+
+            100% {
+                top: 55vw;
+                left: -40vw;
+                height: 60vw;
+                width: 60vw;
+                background: url(https://icodeayush.github.io/BeeSoft/svg/s11.svg) no-repeat center;
+            }
+        }
+
+        @keyframes svgB {
+            0% {
+                right: 6vw;
+                top: 6vw;
+                background: url(https://icodeayush.github.io/BeeSoft/svg/s22.svg) no-repeat center;
+            }
+
+            20% {
+                background: url(https://icodeayush.github.io/BeeSoft/svg/s12.svg) no-repeat center;
+            }
+
+            100% {
+                height: 30vw;
+                width: 30vw;
+                top: 56vw;
+                background: url(https://icodeayush.github.io/BeeSoft/svg/s22.svg) no-repeat center;
+            }
+        }
+
+        @keyframes svgC {
+            0% {
+                width: 40vw;
+                height: 30vw;
+                right: 6vw;
+                top: 6vw;
+                background: url(https://icodeayush.github.io/BeeSoft/svg/so1.svg) no-repeat center;
+            }
+
+            40% {
+                background: url(https://icodeayush.github.io/BeeSoft/svg/so2.svg) no-repeat center;
+            }
+
+            80% {
+                background: url(https://icodeayush.github.io/BeeSoft/svg/so1.svg) no-repeat center;
+            }
+
+            100% {
+                width: 70vw;
+                height: 60vw;
+                top: 52vw;
+                right: -30vw;
+                background: url(https://icodeayush.github.io/BeeSoft/svg/so1.svg) no-repeat center;
+            }
+        }
+
+        @keyframes LoadAniY {
+            from {
+                opacity: 0;
+                transform: translateY(3.1vw);
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes LoadAniXL {
+            from {
+                opacity: 0;
+                transform: translateX(1.5vw);
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes LoadAniXR {
+            from {
+                opacity: 0;
+                transform: translateX(-1.5vw);
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes LoadAniOpacityY {
+            from {
+                opacity: 0;
+                transform: translateY(0.7vw);
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes LoadAniOpacityXL {
+            from {
+                opacity: 0;
+                transform: translateX(0.3vw);
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes LoadAniOpacityXR {
+            from {
+                opacity: 0;
+                transform: translateX(-0.3vw);
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /*-------------@media (max-width: 1920px)------------- */
+
+        @media (max-width: 1920px) {
+            :root {
+                --FontH1: 12.148vw;
+                --FontH2: 7.508vw;
+                --FontH3: 4.641vw;
+                --FontH4: 2.868vw;
+                --FontH5: 1.772vw;
+                --FontParagraph: 1.095vw;
+                --FontSubtitle: 0.677vw;
+                /*-------------GoldenRatio (1.618) (Viewport Width 1920px)------------- */
+                --GoldenRatio1: 100vw;
+                --GoldenRatio2: 61.805vw;
+                --GoldenRatio3: 38.198vw;
+                --GoldenRatio4: 23.608vw;
+                --GoldenRatio5: 14.591vw;
+                --GoldenRatio6: 9.018vw;
+                --GoldenRatio7: 5.573vw;
+                --GoldenRatio8: 3.445vw;
+                --GoldenRatio9: 2.129vw;
+                --GoldenRatio10: 1.316vw;
+                --GoldenRatio11: 0.814vw;
+                --GoldenRatio12: 0.503vw;
+                --GoldenRatio13: 0.310vw;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
+    <div id="wrapper">
+        <div id="SVGWrap">
+            <div id="svgA"></div>
+            <div id="svgB"></div>
+            <div id="svgC"></div>
+        </div>
+        <a id="logo" href="login-page.html">
+            <h1>Go to SignIn page</h1>
+        </a>
+        <div id="intro">
+            <h1 id="s1">
+                <span>
+                    Welcome To
+                    Project NSTU
+                    APP.
+                </span>
+            </h1>
+        </div>
+        <footer>
+            <span id="insta">
+                <a href="https://github.com/Shachin-Chakma/Project-NSTU"></a>
+            </span>
+            <h1 id="copyright">&copy; 2021</h1>
+            <p id="codeby">Code By <span>Project NSTU Team</span></p>
+        </footer>
+    </div>
 </body>
 
 </html>

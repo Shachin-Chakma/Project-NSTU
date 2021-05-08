@@ -69,7 +69,7 @@ const displayClasses = (data) => {
        
         createDiv.innerHTML = `
             <div class="${isActive ? 'class-active' : 'class-unactive'}"></div>
-            <a data-page="attendance-table.html" class="myBtn${id}" onmouseenter="helper(${id})">
+            <a data-page="02.student-attendance-page-2.html" class="myBtn${id}" onmouseenter="helper(${id})">
                 <p>SESSION: ${session}</p>
                 <p>SEMESTER: ${semester}</p>
                 <p>COURSE: ${course}</p>
