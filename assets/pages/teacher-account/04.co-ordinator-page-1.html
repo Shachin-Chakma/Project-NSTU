@@ -39,7 +39,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="javascript:;"><i class="dw dw-settings2"></i> Setting</a>
-                        <a class="dropdown-item" href="javascript:;"><i class="dw dw-logout"></i> Log Out</a>
+                        <a class="dropdown-item" href="../../../login-page.html"><i class="dw dw-logout"></i> Log Out</a>
                     </div>
                 </div>
             </div>
@@ -57,28 +57,28 @@
             <div class="sidebar-menu">
                 <ul id="accordion-menu">
                     <li class="dropdown">
-                        <a href="profile.html" class="dropdown-toggle no-arrow">
+                        <a href="01.profile.html" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-user"></span><span class="mtext">Profile</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="student-attendance.html" class="dropdown-toggle no-arrow">
+                        <a href="02.student-attendance-page-1.html" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-open-book-2"></span><span class="mtext">Attendance</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="student-details.html" class="dropdown-toggle no-arrow">
+                        <a href="03.student-details-page-1.html" class="dropdown-toggle no-arrow">
                             <span class="micon dw ion-information-circled"></span><span class="mtext">Student
                                 Details</span>
                         </a>
                     </li>
                     <li>
-                        <a href="teacher-assign-page.html" class="dropdown-toggle no-arrow">
+                        <a href="04.co-ordinator-page-1.html" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-user-1"></span><span class="mtext">Co-ordinator</span>
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="chairman.html" class="dropdown-toggle no-arrow">
+                        <a href="05.chairman-page-1.html" class="dropdown-toggle no-arrow">
                             <span class="micon dw dw-user1"></span><span class="mtext">Chairman</span>
                         </a>
                     </li>
@@ -117,7 +117,7 @@
                                 <div class="tab height-100-p">
                                     <div class="data-collection">
                                         <div class="heading-title">
-                                            <h4>Assign yourself as a Chairman</h4>
+                                            <h4>Assign yourself as a Co-ordinator</h4>
                                         </div>
                                         <div class="data-collect-form">
                                             <form action="">
@@ -130,10 +130,22 @@
                                                     <option value="TE">TE</option>
                                                 </select>
                                             </form>
-                                           
+                                            <form action="">
+                                                <label for="session">Select Session: </label>
+                                                <select name="session" id="session">
+                                                    <option value="2013-2014">2013-2014</option>
+                                                    <option value="2014-2015">2014-2015</option>
+                                                    <option value="2015-2016">2015-2016</option>
+                                                    <option value="2016-2017">2016-2017</option>
+                                                    <option value="2017-2018">2017-2018</option>
+                                                    <option value="2018-2019">2018-2019</option>
+                                                    <option value="2019-2020">2019-2020</option>
+                                                    <option value="2020-2021">2020-2021</option>
+                                                </select>
+                                            </form>
                                         </div>
                                         <div class="assign-button">
-                                            <button data-page="chairman.html" class="myBtn0" onmouseenter="helper(0)">Assign</button>
+                                            <button data-page="04.co-ordinator-page-2.html" class="myBtn0" onmouseenter="helper(0)">Assign</button>
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +164,7 @@
     <!-- js -->
     <script src="../../js/core.js"></script>
     <script src="../../js/script.min.js"></script>
-    <script src="../../js/project-nstu-custom-script.js"></script>
+    <script src="../../js/custom-script/project-nstu-custom-script.js"></script>
 </body>
 
 </html>

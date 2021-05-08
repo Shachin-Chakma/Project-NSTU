@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic Page Info -->
+    <meta charset="utf-8">
+    <title>Project NSTU</title>
+
+    <!-- Site favicon -->
+    <link rel="apple-touch-icon" sizes="180x270" href="../../img/NSTU-Logo.png">
+    <link rel="icon" type="image/png" sizes="32x48" href="../../img/NSTU-Logo.png">
+    <link rel="icon" type="image/png" sizes="16x24" href="../../img/NSTU-Logo.png">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../../css/core.css">
+    <link rel="stylesheet" type="text/css" href="../../css/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <!-- Custom CSS -->
+    <style>
+        .btn-style {
+            width: 100px;
+            height: 40px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: 800;
+            padding: 0 20px;
+        }
+
+        .btn-style:hover {
+            background: transparent;
+            border: 2px solid #000;
+            color: #000;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="menu-icon dw dw-menu"></div>
+        </div>
+        <div class="header-right">
+            <div class="user-info-dropdown">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                        <span class="user-icon">
+                            <img src="../../img/profile.jpg" alt="">
+                        </span>
+                        <span class="user-name">Teacher Name</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+                        <a class="dropdown-item" href="javascript:;"><i class="dw dw-settings2"></i> Setting</a>
+                        <a class="dropdown-item" href="../../../login-page.html"><i class="dw dw-logout"></i> Log Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="left-side-bar">
+        <div class="brand-logo">
+            <h4 class="heading-letter">Menu</h4>
+            <div class="close-sidebar" data-toggle="left-sidebar-close">
+                <i class="ion-close-round"></i>
+            </div>
+        </div>
+        <div class="menu-block customscroll">
+            <div class="sidebar-menu">
+                <ul id="accordion-menu">
+                    <li class="dropdown">
+                        <a href="01.profile.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-user"></span><span class="mtext">Profile</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="02.student-attendance-page-1.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-open-book-2"></span><span class="mtext">Attendance</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="03.student-details-page-3.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw ion-information-circled"></span><span class="mtext">Student
+                                Details</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="04.co-ordinator-page-1.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-user-1"></span><span class="mtext">Co-ordinator</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="05.chairman-page-1.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-user1"></span><span class="mtext">Chairman</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20 xs-pd-20-10">
+            <div class="footer-wrap pd-20 mb-20 card-box">
+                <div class="university-logo">
+                    <img src="../../img/NSTU-Logo.png" alt="">
+                </div>
+                <div class="university-name">
+                    <h3>Noakhali Science & Technology University</h3>
+                </div>
+            </div>
+
+            <div class="min-height-200px">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
+                        <div class="pd-20 card-box height-100-p">
+                            <div class="profile-photo">
+                                <img src="../../img/profile.jpg" alt="" class="avatar-photo">
+                            </div>
+                            <h5 class="text-center h5 mb-0">Nuton Chakma</h5>
+                            <ul>
+                                <li>
+                                    <span>Student ID:</span>
+                                    2050608001
+                                </li>
+                                <li>
+                                    <span>Email:</span>
+                                    nutonchakma@projectnstu.com
+                                </li>
+                                <li>
+                                    <span>Phone Number:</span>
+                                    01xxx-xxxxxx
+                                </li>
+                                <li>
+                                    <span>Gender:</span>
+                                    Male
+                                </li>
+                                <li>
+                                    <span>Session:</span>
+                                    2016-2017
+                                </li>
+                                <li>
+                                    <span>Hall Name:</span>
+                                    ASH
+                                </li>
+                            </ul>
+                            <h5 class="text-center h5 mb-0" style="margin: 20px 0;">Total Attendance in Percentage</h5>
+                            <h5 class="text-center h5 mb-0" style="margin: 20px 0;">75%</h5>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
+                        <div class="card-box height-100-p overflow-hidden">
+                            <div class="profile-tab height-100-p">
+                                <div class="tab height-100-p">
+                                    <section class="container">
+                                        <table class="order-table table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Number of Classes</th>
+                                                    <th>Number of Classes Present</th>
+                                                    <th>Percentage</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="text-align: center;">
+                                                        <p>CSE 551: 60</p>
+                                                        <p>CSE 551: 60</p>
+                                                        <p>CSE 551: 60</p>
+                                                        <p>CSE 551: 60</p>
+                                                        <p>CSE 551: 60</p>
+                                                    </td>
+                                                    <td style="text-align: center;">
+                                                        <p class="edit-value-1">45</p>
+                                                        <p class="edit-value-2">45</p>
+                                                        <p class="edit-value-3">45</p>
+                                                        <p class="edit-value-4">45</p>
+                                                        <p class="edit-value-5">45</p>
+                                                    </td>
+                                                    <td style="text-align: center;">
+                                                        <p>75%</p>
+                                                        <p>75%</p>
+                                                        <p>75%</p>
+                                                        <p>75%</p>
+                                                        <p>75%</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button id="edit-btn" class="btn-style">Edit</button>
+                                        <button id="save-btn" class="btn-style">Save</button>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-wrap pd-20 mb-20 card-box">
+                This templete is develop by Project NSTU Team
+            </div>
+        </div>
+    </div>
+
+
+    <!-- js -->
+    <script src="../../js/core.js"></script>
+    <script src="../../js/script.min.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+        const table_data_1 = document.querySelector(".edit-value-1");
+        const table_data_2 = document.querySelector(".edit-value-2");
+        const table_data_3 = document.querySelector(".edit-value-3");
+        const table_data_4 = document.querySelector(".edit-value-4");
+        const table_data_5 = document.querySelector(".edit-value-5");
+        const edit_button = document.getElementById("edit-btn");
+        const save_button = document.getElementById("save-btn");
+
+        edit_button.addEventListener("click", function () {
+            table_data_1.contentEditable = true;
+            table_data_2.contentEditable = true;
+            table_data_3.contentEditable = true;
+            table_data_4.contentEditable = true;
+            table_data_5.contentEditable = true;
+            table_data_1.style.backgroundColor = "rgb(178, 159, 208)";
+            table_data_2.style.backgroundColor = "rgb(178, 159, 208)";
+            table_data_3.style.backgroundColor = "rgb(178, 159, 208)";
+            table_data_4.style.backgroundColor = "rgb(178, 159, 208)";
+            table_data_5.style.backgroundColor = "rgb(178, 159, 208)";
+        });
+
+        save_button.addEventListener("click", function () {
+            // table_data.contentEditable = false;
+            // table_data.style.backgroundColor = "#fff";
+            table_data_1.contentEditable = true;
+            table_data_2.contentEditable = true;
+            table_data_3.contentEditable = true;
+            table_data_4.contentEditable = true;
+            table_data_5.contentEditable = true;
+            table_data_1.style.backgroundColor = "transparent";
+            table_data_2.style.backgroundColor = "transparent";
+            table_data_3.style.backgroundColor = "transparent";
+            table_data_4.style.backgroundColor = "transparent";
+            table_data_5.style.backgroundColor = "transparent";
+        })
+    </script>
+</body>
+
+</html>
