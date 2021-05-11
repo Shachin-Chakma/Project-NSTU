@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8">
-    <title>Project NSTU | Teacher Portal</title>
+    <title>Project NSTU | Student Portal</title>
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x270" href="../../img/NSTU-Logo.png">
@@ -24,23 +24,18 @@
 
     <!-- Custom CSS -->
     <style>
-        .btn-style {
-            width: 100px;
-            height: 40px;
-            background: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            text-transform: uppercase;
-            font-weight: 800;
-            padding: 0 20px;
+        .profile-details {
+            text-align: center;
+            margin: 5px 0 !important;
+            color: #6c757d;
         }
 
-        .btn-style:hover {
-            background: transparent;
-            border: 2px solid #000;
-            color: #000;
-            font-weight: 500;
+        .font-color {
+            color: #6c757d;
+        }
+
+        .order-table th {
+            text-align: center;
         }
     </style>
 </head>
@@ -61,7 +56,8 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="javascript:;"><i class="dw dw-settings2"></i> Setting</a>
-                        <a class="dropdown-item" href="../../../login-page.html"><i class="dw dw-logout"></i> Log Out</a>
+                        <a class="dropdown-item" href="../../../login-page.html"><i class="dw dw-logout"></i> Log
+                            Out</a>
                     </div>
                 </div>
             </div>
@@ -84,24 +80,8 @@
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="02.student-attendance-page-1.html" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-open-book-2"></span><span class="mtext">Attendance</span>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="03.student-details-page-3.html" class="dropdown-toggle no-arrow">
-                            <span class="micon dw ion-information-circled"></span><span class="mtext">Student
-                                Details</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="04.co-ordinator-page-1.html" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-user-1"></span><span class="mtext">Co-ordinator</span>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="05.chairman-page-1.html" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-user1"></span><span class="mtext">Chairman</span>
+                        <a href="02.my-attendance-page-2.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-open-book-2"></span><span class="mtext">My Attendance</span>
                         </a>
                     </li>
                 </ul>
@@ -129,35 +109,8 @@
                                 <img src="../../img/profile.jpg" alt="" class="avatar-photo">
                             </div>
                             <h5 class="text-center h5 mb-0">Nuton Chakma</h5>
-                            <ul>
-                                <li>
-                                    <span>Student ID:</span>
-                                    2050608001
-                                </li>
-                                <li>
-                                    <span>Email:</span>
-                                    nutonchakma@projectnstu.com
-                                </li>
-                                <li>
-                                    <span>Phone Number:</span>
-                                    01xxx-xxxxxx
-                                </li>
-                                <li>
-                                    <span>Gender:</span>
-                                    Male
-                                </li>
-                                <li>
-                                    <span>Session:</span>
-                                    2016-2017
-                                </li>
-                                <li>
-                                    <span>Hall Name:</span>
-                                    ASH
-                                </li>
-                            </ul>
-                            <h5 class="text-center h5 mb-0" style="margin: 20px 0;">Total Attendance in Percentage</h5>
-                            <h5 class="text-center h5 mb-0" style="margin: 20px 0;">75%</h5>
-
+                            <p class="profile-details">Department of ICE</p>
+                            <p class="profile-details">Noakhali Science & Technology University</p>
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
@@ -199,8 +152,6 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <button id="edit-btn" class="btn-style">Edit</button>
-                                        <button id="save-btn" class="btn-style">Save</button>
                                     </section>
                                 </div>
                             </div>
@@ -219,45 +170,6 @@
     <!-- js -->
     <script src="../../js/use-core.js"></script>
     <script src="../../js/use-script.min.js"></script>
-
-    <!-- Custom Script -->
-    <script>
-        const table_data_1 = document.querySelector(".edit-value-1");
-        const table_data_2 = document.querySelector(".edit-value-2");
-        const table_data_3 = document.querySelector(".edit-value-3");
-        const table_data_4 = document.querySelector(".edit-value-4");
-        const table_data_5 = document.querySelector(".edit-value-5");
-        const edit_button = document.getElementById("edit-btn");
-        const save_button = document.getElementById("save-btn");
-
-        edit_button.addEventListener("click", function () {
-            table_data_1.contentEditable = true;
-            table_data_2.contentEditable = true;
-            table_data_3.contentEditable = true;
-            table_data_4.contentEditable = true;
-            table_data_5.contentEditable = true;
-            table_data_1.style.backgroundColor = "rgb(178, 159, 208)";
-            table_data_2.style.backgroundColor = "rgb(178, 159, 208)";
-            table_data_3.style.backgroundColor = "rgb(178, 159, 208)";
-            table_data_4.style.backgroundColor = "rgb(178, 159, 208)";
-            table_data_5.style.backgroundColor = "rgb(178, 159, 208)";
-        });
-
-        save_button.addEventListener("click", function () {
-            // table_data.contentEditable = false;
-            // table_data.style.backgroundColor = "#fff";
-            table_data_1.contentEditable = true;
-            table_data_2.contentEditable = true;
-            table_data_3.contentEditable = true;
-            table_data_4.contentEditable = true;
-            table_data_5.contentEditable = true;
-            table_data_1.style.backgroundColor = "transparent";
-            table_data_2.style.backgroundColor = "transparent";
-            table_data_3.style.backgroundColor = "transparent";
-            table_data_4.style.backgroundColor = "transparent";
-            table_data_5.style.backgroundColor = "transparent";
-        })
-    </script>
 </body>
 
 </html>

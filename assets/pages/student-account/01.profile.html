@@ -2,15 +2,456 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8">
+	<title>Project NSTU | Student Portal</title>
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x270" href="../../img/NSTU-Logo.png">
+	<link rel="icon" type="image/png" sizes="32x48" href="../../img/NSTU-Logo.png">
+	<link rel="icon" type="image/png" sizes="16x24" href="../../img/NSTU-Logo.png">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="../../css/use-core.css">
+	<link rel="stylesheet" type="text/css" href="../../css/use-icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/use-style.css">
+
+	<!-- Pop Up CSS Start -->
+	<style>
+		/* The Modal (background) */
+		.modal {
+			display: none;
+			/* Hidden by default */
+			position: fixed;
+			/* Stay in place */
+			z-index: 1;
+			/* Sit on top */
+			padding-top: 100px;
+			/* Location of the box */
+			left: 0;
+			top: 0;
+			width: 100%;
+			/* Full width */
+			height: 100%;
+			/* Full height */
+			overflow: auto;
+			/* Enable scroll if needed */
+			background-color: rgb(0, 0, 0);
+			/* Fallback color */
+			background-color: rgba(0, 0, 0, 0.4);
+			/* Black w/ opacity */
+		}
+
+		/* Modal Content */
+		.modal-content {
+			position: relative;
+			background-color: #fefefe;
+			margin: auto;
+			padding: 0;
+			border: 1px solid #888;
+			width: 60%;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-animation-name: animatetop;
+			-webkit-animation-duration: 0.4s;
+			animation-name: animatetop;
+			animation-duration: 0.4s
+		}
+
+		/* Add Animation */
+		@-webkit-keyframes animatetop {
+			from {
+				top: -300px;
+				opacity: 0
+			}
+
+			to {
+				top: 0;
+				opacity: 1
+			}
+		}
+
+		@keyframes animatetop {
+			from {
+				top: -300px;
+				opacity: 0
+			}
+
+			to {
+				top: 0;
+				opacity: 1
+			}
+		}
+
+		/* The Close Button */
+		.close {
+			color: white;
+			float: left;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		.modal-header {
+			padding: 2px 16px;
+			background-color: #0b132b;
+			color: white;
+			height: 70px;
+		}
+
+		.modal-header h2 {
+			margin-top: 20px;
+		}
+
+		.modal-body {
+			padding: 2px 16px;
+		}
+
+		.modal-footer {
+			padding: 2px 16px;
+			background-color: #0b132b;
+			color: white;
+			height: 70px;
+		}
+
+		.admit-card-title {
+			font-size: 25px;
+			color: #6c757d;
+		}
+
+		.modal-footer .download:hover {
+			color: #fff;
+			font-weight: 800;
+		}
+	</style>
+	<!-- Pop Up CSS End -->
+	<!-- Custom CSS -->
+	<style>
+		.profile-details {
+			text-align: center;
+			margin: 5px 0 !important;
+			color: #6c757d;
+		}
+
+		.font-color {
+			color: #6c757d;
+		}
+
+		.admit-card-download {
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		.admit-card-download button {
+			width: auto;
+			height: 40px;
+			background: #3498db;
+			color: #fff;
+			border: none;
+			border-radius: 50px;
+			text-transform: uppercase;
+			font-weight: 800;
+			padding: 0 20px;
+		}
+
+		.admit-card-download button:hover {
+			background: transparent;
+			border: 2px solid #000;
+			color: #000;
+			font-weight: 500;
+		}
+
+		.text-red {
+			color: blueviolet;
+		}
+
+		.blink-soft {
+			animation: blinker 1.5s linear infinite;
+		}
+
+		@keyframes blinker {
+			50% {
+				opacity: 0;
+			}
+		}
+
+		.admit-card-logo img {
+			width: 50%;
+		}
+
+		.admit-card-profile img {
+			width: 50%;
+		}
+		
+		.admit-card-title {
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		.card-header h5 {
+			font-size: 18px;
+		}
+
+		.margin-left {
+			margin-left: 15px;
+		}
+
+		.card-body h5 {
+			text-align: left;
+			margin: 0 70px;
+		}
+	</style>
 </head>
 
 <body>
-	<h1 style="text-align: center;">This page is in under construction!</h1>
-	<h2 style="text-align: center;">Thank You</h2>
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon dw dw-menu"></div>
+		</div>
+		<div class="header-right">
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						<span class="user-icon">
+							<img src="../../img/profile.jpg" alt="">
+						</span>
+						<span class="user-name">Teacher Name</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+						<a class="dropdown-item" href="javascript:;"><i class="dw dw-settings2"></i> Setting</a>
+						<a class="dropdown-item" href="../../../login-page.html"><i class="dw dw-logout"></i> Log
+							Out</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="left-side-bar">
+		<div class="brand-logo">
+			<h4 class="heading-letter">Menu</h4>
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+					<li class="dropdown">
+						<a href="01.profile.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-user"></span><span class="mtext">Profile</span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="02.my-attendance-page-1.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-open-book-2"></span><span class="mtext">My Attendance</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu-overlay"></div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="footer-wrap pd-20 mb-20 card-box">
+				<div class="university-logo">
+					<img src="../../img/NSTU-Logo.png" alt="">
+				</div>
+				<div class="university-name">
+					<h3>Noakhali Science & Technology University</h3>
+				</div>
+			</div>
+
+			<div class="min-height-200px">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mb-30">
+						<div class="pd-20 card-box height-100-p">
+							<div class="profile-photo">
+								<img src="../../img/profile.jpg" alt="" class="avatar-photo">
+							</div>
+							<h5 class="text-center h5 mb-0">Nuton Chakma</h5>
+							<p class="profile-details">Department of ICE</p>
+							<p class="profile-details">Noakhali Science & Technology University</p>
+							<div class="admit-card-download">
+								<p class="text-red blink-soft">Click the button below to generate your admit card</p>
+								<button class="popUpBtn" data-modal="myModal1">Generate</button>
+								<!-- The Modal1 -->
+								<div id="myModal1" class="modal">
+									<!-- Modal content -->
+									<div class="modal-content">
+										<div class="modal-header">
+											<h2 class="admit-card-title">Your 8th Semester Admit Card</h2>
+											<span class="close">×</span>
+										</div>
+										<div class="modal-body">
+											<section>
+												<div class="content">
+													<div class="card-header">
+														<div class="row">
+															<div class="col-lg-3 admit-card-logo">
+																<img src="../../img/admit-card-logo.png" alt="">
+															</div>
+															<div class="col-lg-6 admit-card-title">
+																<h5>Noakhali Science & Technology University</h5>
+																<h5><span>Year: 4<sup>th</sup></span><span class="margin-left">Session: 2016-2017</span></h5>
+																<h5><span>Term: 8<sup>th</sup></span><span class="margin-left">Final Examination - 2021</span></h5>
+															</div>
+															<div class="col-lg-3 admit-card-profile">
+																<img src="../../img/profile.jpg" alt="">
+															</div>
+														</div>
+													</div>
+													<div class="card-body">
+														<h5>Name: Nuton Chakma</h5>
+														<h5>Department: ICE</h5>
+														<h5>Roll No: 2050608001</h5>
+														<h5>Hall Name: ASH</h5>
+														<h5>Date of commencement of Examination: 18/02/2021</h5>
+													</div>
+												</div>
+											</section>
+											<div id="editor"></div>
+										</div>
+										<div class="modal-footer">
+											<a href="../../img/admit-card.pdf"><button type="button"
+													class="download">Download</button></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
+						<div class="card-box height-100-p overflow-hidden">
+							<div class="profile-tab height-100-p">
+								<div class="tab height-100-p">
+									<div class="profile-info">
+										<h2 class="profile-details">My Details</h2>
+										<table class="font-color">
+											<tbody>
+												<tr>
+													<td>Student ID</td>
+													<td>2050608001</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td>Email</td>
+													<td>nutonchakma@projectnstu.com</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td>Phone Number</td>
+													<td>01xxx-xxxxxx</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td>Session</td>
+													<td>2016-2017</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td>Hall Name</td>
+													<td>ASH</td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr>
+													<td>Gender</td>
+													<td>Male</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-wrap pd-20 mb-20 card-box">
+				This templete is develop by Project NSTU Team
+			</div>
+		</div>
+	</div>
+
+
+	<!-- js -->
+	<script src="../../js/use-core.js"></script>
+	<script src="../../js/use-script.min.js"></script>
+
+	<!-- Pop Up Script Start -->
+	<script>
+		$(document).ready(function () {
+			$('.popUpBtn').on('click', function () {
+				$('#' + $(this).data('modal')).css('display', 'block');
+			})
+			$('span.close').on('click', function () {
+				$('.modal').css('display', 'none');
+			})
+			$(window).on('click', function (event) {
+				if (jQuery.inArray(event.target, $('.modal')) != "-1") {
+					$('.modal').css('display', 'none');
+				}
+			})
+		})
+		// Get the modal
+		// var modal = document.getElementById('myModal');
+
+		// Get the button that opens the modal
+		// var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		// var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks the button, open the modal 
+		// btn.onclick = function() {
+		//     modal.style.display = "block";
+		// }
+
+		// When the user clicks on <span> (x), close the modal
+		// span.onclick = function() {
+		//     modal.style.display = "none";
+		// }
+
+		// When the user clicks anywhere outside of the modal, close it
+		// window.onclick = function(event) {
+		//     if (event.target == modal) {
+		//         modal.style.display = "none";
+		//     }
+		// }
+		$(document).ready(function () {
+			$('.popUpBtn').on('click', function () {
+				$('#' + $(this).data('modal')).css('display', 'block');
+			})
+			$('span.close').on('click', function () {
+				$('.modal').css('display', 'none');
+			})
+			$(window).on('click', function (event) {
+				if (jQuery.inArray(event.target, $('.modal')) != "-1") {
+					$('.modal').css('display', 'none');
+				}
+			})
+		})
+	</script>
+	<!-- Pop Up Script End -->
 </body>
 
 </html>

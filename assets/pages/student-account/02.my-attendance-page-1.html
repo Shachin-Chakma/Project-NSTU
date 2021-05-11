@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Basic Page Info -->
     <meta charset="utf-8">
-    <title>Project NSTU | Teacher Portal</title>
+    <title>Project NSTU | Student Portal</title>
 
     <!-- Site favicon -->
     <link rel="apple-touch-icon" sizes="180x270" href="../../img/NSTU-Logo.png">
@@ -21,6 +21,44 @@
     <link rel="stylesheet" type="text/css" href="../../css/use-core.css">
     <link rel="stylesheet" type="text/css" href="../../css/use-icon-font.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/use-style.css">
+
+    <!-- Custom CSS -->
+    <style>
+        .profile-details {
+            text-align: center;
+            margin: 5px 0 !important;
+            color: #6c757d;
+        }
+
+        .font-color {
+            color: #6c757d;
+        }
+
+        .semester-list p {
+            width: 100%;
+            height: 50px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: 800;
+            padding: 0 20px;
+            text-align: center;
+            padding-top: 12px;
+        }
+
+        .semester-list p:hover {
+            background: transparent;
+            border: 2px solid #000;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .padding-semester-list {
+            padding: 20px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,7 +77,8 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                         <a class="dropdown-item" href="javascript:;"><i class="dw dw-settings2"></i> Setting</a>
-                        <a class="dropdown-item" href="../../../login-page.html"><i class="dw dw-logout"></i> Log Out</a>
+                        <a class="dropdown-item" href="../../../login-page.html"><i class="dw dw-logout"></i> Log
+                            Out</a>
                     </div>
                 </div>
             </div>
@@ -62,24 +101,8 @@
                         </a>
                     </li>
                     <li class="dropdown">
-                        <a href="02.student-attendance-page-1.html" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-open-book-2"></span><span class="mtext">Attendance</span>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="03.student-details-page-1.html" class="dropdown-toggle no-arrow">
-                            <span class="micon dw ion-information-circled"></span><span class="mtext">Student
-                                Details</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="04.co-ordinator-page-1.html" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-user-1"></span><span class="mtext">Co-ordinator</span>
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="05.chairman-page-1.html" class="dropdown-toggle no-arrow">
-                            <span class="micon dw dw-user1"></span><span class="mtext">Chairman</span>
+                        <a href="02.my-attendance-page-1.html" class="dropdown-toggle no-arrow">
+                            <span class="micon dw dw-open-book-2"></span><span class="mtext">My Attendance</span>
                         </a>
                     </li>
                 </ul>
@@ -106,46 +129,48 @@
                             <div class="profile-photo">
                                 <img src="../../img/profile.jpg" alt="" class="avatar-photo">
                             </div>
-                            <h5 class="text-center h5 mb-0">Teacher Name</h5>
-                            <p class="text-center text-muted font-14">Associate Professor, Department of ICE, Noakhali
-                                Science & Technology University</p>
+                            <h5 class="text-center h5 mb-0">Nuton Chakma</h5>
+                            <p class="profile-details">Department of ICE</p>
+                            <p class="profile-details">Noakhali Science & Technology University</p>
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 mb-30">
                         <div class="card-box height-100-p overflow-hidden">
                             <div class="profile-tab height-100-p">
                                 <div class="tab height-100-p">
-                                    <div class="data-collection">
-                                        <div class="heading-title">
-                                            <h4>Assign yourself as a Co-ordinator</h4>
-                                        </div>
-                                        <div class="data-collect-form">
-                                            <form action="">
-                                                <label for="department">Select Department: </label>
-                                                <select name="department" id="department">
-                                                    <option value="CSE">CSE</option>
-                                                    <option value="ICE">ICE</option>
-                                                    <option value="EEE">EEE</option>
-                                                    <option value="ME">ME</option>
-                                                    <option value="TE">TE</option>
-                                                </select>
-                                            </form>
-                                            <form action="">
-                                                <label for="session">Select Session: </label>
-                                                <select name="session" id="session">
-                                                    <option value="2013-2014">2013-2014</option>
-                                                    <option value="2014-2015">2014-2015</option>
-                                                    <option value="2015-2016">2015-2016</option>
-                                                    <option value="2016-2017">2016-2017</option>
-                                                    <option value="2017-2018">2017-2018</option>
-                                                    <option value="2018-2019">2018-2019</option>
-                                                    <option value="2019-2020">2019-2020</option>
-                                                    <option value="2020-2021">2020-2021</option>
-                                                </select>
-                                            </form>
-                                        </div>
-                                        <div class="assign-button">
-                                            <button data-page="04.co-ordinator-page-2.html" class="myBtn0" onmouseenter="helper(0)">Assign</button>
+                                    <div class="semester-list">
+                                        <h2 class="profile-details padding-semester-list">Semester List</h2>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="02.my-attendance-page-2.html">
+                                                        <p>1<sup>st</sup> Semester</p>
+                                                    </a>
+                                                    <a href="02.my-attendance-page-2.html">
+                                                        <p>2<sup>nd</sup> Semester</p>
+                                                    </a>
+                                                    <a href="02.my-attendance-page-2.html">
+                                                        <p>3<sup>rd</sup> Semester</p>
+                                                    </a>
+                                                    <a href="02.my-attendance-page-2.html">
+                                                        <p>4<sup>th</sup> Semester</p>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <a href="02.my-attendance-page-2.html">
+                                                        <p>5<sup>th</sup> Semester</p>
+                                                    </a>
+                                                    <a href="02.my-attendance-page-2.html">
+                                                        <p>6<sup>th</sup> Semester</p>
+                                                    </a>
+                                                    <a href="02.my-attendance-page-2.html">
+                                                        <p>7<sup>th</sup> Semester</p>
+                                                    </a>
+                                                    <a href="02.my-attendance-page-2.html">
+                                                        <p>8<sup>th</sup> Semester</p>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -161,10 +186,10 @@
         </div>
     </div>
 
+
     <!-- js -->
     <script src="../../js/use-core.js"></script>
     <script src="../../js/use-script.min.js"></script>
-    <script src="../../js/custom-script/project-nstu-custom-script.js"></script>
 </body>
 
 </html>
